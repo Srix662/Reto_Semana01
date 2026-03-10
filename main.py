@@ -10,7 +10,10 @@ def limpiar_valor(valor):
     
     noespacios = valor.strip()
     validos = set("0123456789.-")
-    valor_limpio = "".join([c for c in noespacios if c in validos])
+    valor_limpio = ""
+    for c in noespacios:
+        if c in validos:
+            valor_limpio += c
     
     return valor_limpio
 
